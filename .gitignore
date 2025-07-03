@@ -1,0 +1,5 @@
+echo *.class > .gitignore
+echo bin/ >> .gitignore
+echo out/ >> .gitignore
+echo .DS_Store >> .gitignore
+echo *.jar >> .gitignore
