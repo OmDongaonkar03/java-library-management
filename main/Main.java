@@ -24,16 +24,20 @@ public class Main {
                     String name = sc.nextLine().toString();
 
                     int Price = 0;
+                    int Stock = 0;
                     try{
                         System.out.println("Enter book price :");
                         Price = Integer.parseInt(sc.nextLine());
+
+                        System.out.println("Enter stock quantity");
+                        Stock = Integer.parseInt(sc.nextLine());
                     }catch(NumberFormatException e){
-                        System.out.println("Invalid price");
+                        System.out.println("Invalid price or stock");
                     }
 
                     System.out.println("Enter book author :");
                     String Author = sc.nextLine().toString();
-                    adder.AddBooks(name, Price, Author);
+                    adder.AddBooks(name, Price, Author, Stock);
                     break;
 
                 case "rent":

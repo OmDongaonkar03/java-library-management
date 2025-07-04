@@ -20,7 +20,7 @@ public class Delete {
             }
         }
 
-        String[][] newBooks = new String[count][4];
+        String[][] newBooks = new String[count][5];
         int newIndex = 0;
 
         for (int i = 0; i < originalLength; i++) {
@@ -29,6 +29,7 @@ public class Delete {
                 newBooks[newIndex][1] = originalBooks[i][1];
                 newBooks[newIndex][2] = originalBooks[i][2];
                 newBooks[newIndex][3] = originalBooks[i][3];
+                newBooks[newIndex][4] = originalBooks[i][4];
                 newIndex++;
             }
         }

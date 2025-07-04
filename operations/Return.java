@@ -15,6 +15,9 @@ public class Return {
             for(int i = 0; i < mybooks.books.length; i++){
                 if (mybooks.books[i] != null && mybooks.books[i][0] != null && mybooks.books[i][0].equalsIgnoreCase(name)) {
                     mybooks.books[i][3] = "available";
+                    int quantity = Integer.parseInt(mybooks.books[i][4]);
+                    quantity++;
+                    mybooks.books[i][4] = Integer.toString(quantity);
                     System.out.println("Book returned successfully");
                     changed = true;
                 }

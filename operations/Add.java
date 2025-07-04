@@ -9,7 +9,7 @@ public class Add {
         this.myadd = booksRef; 
     }
 
-    public void AddBooks(String name, int price, String author){
+    public void AddBooks(String name, int price, String author, int Stock){
         boolean alreadyExists = false;
 
         for(int i = 0; i < myadd.books.length; i++){
@@ -22,11 +22,11 @@ public class Add {
         if(alreadyExists){
             System.out.println("Book Already Exists");
         } else {
-            boolean success = myadd.BookUpdate(name, price, author);
+            boolean success = myadd.BookUpdate(name, price, author, Stock);
             if(success) {
                 System.out.println("Book Added: " + name);
             } else {
-                System.out.println("Library is full or name is invalid.");
+                System.out.println("Library is full or data is invalid.");
             }
         }
     }
